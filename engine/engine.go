@@ -292,8 +292,8 @@ func (s *Settings) PrintLoadedSettings() {
 	gctlog.Debugln(gctlog.Global)
 }
 
-// SetupWebsocketRoutineManager sets up bot.WebsocketRoutineManager
-func (bot *Engine) SetupWebsocketRoutineManager() {
+// SetupAndStartWebsocketRoutineManager sets up bot.WebsocketRoutineManager
+func (bot *Engine) SetupAndStartWebsocketRoutineManager() {
 	if w, err := setupWebsocketRoutineManager(bot.ExchangeManager, bot.OrderManager, bot.currencyPairSyncer, &bot.Config.Currency, bot.Settings.Verbose); err != nil {
 		gctlog.Errorf(gctlog.Global, "Unable to initialise websocket routine manager. Err: %s", err)
 	} else {
@@ -301,6 +301,43 @@ func (bot *Engine) SetupWebsocketRoutineManager() {
 		if err = bot.WebsocketRoutineManager.Start(); err != nil {
 			gctlog.Errorf(gctlog.Global, "failed to start websocket routine manager. Err: %s", err)
 		}
+	}
+}
+
+func (bot *Engine) SetupAndStartSyncManager() {
+	cfg := bot.Config.SyncManagerConfig
+	cfg.SynchronizeTicker = bot.Settings.EnableTickerSyncing
+	cfg.SynchronizeOrderbook = bot.Settings.EnableOrderbookSyncing
+	cfg.SynchronizeContinuously = bot.Settings.SyncContinuously
+	cfg.SynchronizeTrades = bot.Settings.EnableTradeSyncing
+	cfg.Verbose = bot.Settings.Verbose || cfg.Verbose
+
+	if cfg.TimeoutREST != bot.Settings.SyncTimeoutREST &&
+		bot.Settings.SyncTimeoutREST != config.DefaultSyncerTimeoutREST {
+		cfg.TimeoutREST = bot.Settings.SyncTimeoutREST
+	}
+	if cfg.TimeoutWebsocket != bot.Settings.SyncTimeoutWebsocket &&
+		bot.Settings.SyncTimeoutWebsocket != config.DefaultSyncerTimeoutWebsocket {
+		cfg.TimeoutWebsocket = bot.Settings.SyncTimeoutWebsocket
+	}
+	if cfg.NumWorkers != bot.Settings.SyncWorkersCount &&
+		bot.Settings.SyncWorkersCount != config.DefaultSyncerWorkers {
+		cfg.NumWorkers = bot.Settings.SyncWorkersCount
+	}
+	if s, err := SetupSyncManager(
+		&cfg,
+		bot.ExchangeManager,
+		&bot.Config.RemoteControl,
+		bot.Settings.EnableWebsocketRoutine,
+	); err != nil {
+		gctlog.Errorf(gctlog.Global, "Unable to initialise exchange currency pair syncer. Err: %s", err)
+	} else {
+		bot.currencyPairSyncer = s
+		go func() {
+			if err := bot.currencyPairSyncer.Start(); err != nil {
+				gctlog.Errorf(gctlog.Global, "failed to start exchange currency pair manager. Err: %s", err)
+			}
+		}()
 	}
 }
 
