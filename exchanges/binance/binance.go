@@ -12,15 +12,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/convert"
-	"github.com/thrasher-corp/gocryptotrader/common/crypto"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/order"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/request"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/convert"
+	"github.com/antonk9021/qocryptotrader/common/crypto"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/exchanges/request"
 )
 
 // Binance is the overarching type across the Binance package

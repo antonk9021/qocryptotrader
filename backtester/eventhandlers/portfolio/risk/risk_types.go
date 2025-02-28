@@ -4,10 +4,10 @@ import (
 	"errors"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio/compliance"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio/holdings"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/order"
-	"github.com/thrasher-corp/gocryptotrader/common/key"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio/compliance"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio/holdings"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/order"
+	"github.com/antonk9021/qocryptotrader/common/key"
 )
 
 var (

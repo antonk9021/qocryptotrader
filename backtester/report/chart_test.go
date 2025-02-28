@@ -6,17 +6,17 @@ import (
 	"time"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/statistics"
-	evkline "github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/kline"
-	"github.com/thrasher-corp/gocryptotrader/backtester/funding"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/key"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/futures"
-	gctkline "github.com/thrasher-corp/gocryptotrader/exchanges/kline"
-	gctorder "github.com/thrasher-corp/gocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/statistics"
+	evkline "github.com/antonk9021/qocryptotrader/backtester/eventtypes/kline"
+	"github.com/antonk9021/qocryptotrader/backtester/funding"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/key"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/futures"
+	gctkline "github.com/antonk9021/qocryptotrader/exchanges/kline"
+	gctorder "github.com/antonk9021/qocryptotrader/exchanges/order"
 )
 
 func TestCreateUSDTotalsChart(t *testing.T) {

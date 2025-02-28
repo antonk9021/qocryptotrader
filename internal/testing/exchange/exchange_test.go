@@ -6,10 +6,10 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/binance"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/sharedtestvalues"
-	mockws "github.com/thrasher-corp/gocryptotrader/internal/testing/websocket"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/exchanges/binance"
+	"github.com/antonk9021/qocryptotrader/exchanges/sharedtestvalues"
+	mockws "github.com/antonk9021/qocryptotrader/internal/testing/websocket"
 )
 
 // TestSetup exercises Setup

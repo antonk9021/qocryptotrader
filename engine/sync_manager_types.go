@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common/key"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/common/key"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/currency"
 )
 
 // syncBase stores information

@@ -10,12 +10,12 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/timedmutex"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/mock"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/nonce"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/timedmutex"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/exchanges/mock"
+	"github.com/antonk9021/qocryptotrader/exchanges/nonce"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 const (

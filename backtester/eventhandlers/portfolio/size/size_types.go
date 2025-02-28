@@ -3,7 +3,7 @@ package size
 import (
 	"errors"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/exchange"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/exchange"
 )
 
 var (

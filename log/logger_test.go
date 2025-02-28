@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/common/convert"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/common/convert"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 var (

@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/wrappers/validator"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/gctscript/wrappers/validator"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 // New returns a new instance of VM

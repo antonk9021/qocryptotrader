@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/database"
-	dbpsql "github.com/thrasher-corp/gocryptotrader/database/drivers/postgres"
-	dbsqlite3 "github.com/thrasher-corp/gocryptotrader/database/drivers/sqlite3"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/database"
+	dbpsql "github.com/antonk9021/qocryptotrader/database/drivers/postgres"
+	dbsqlite3 "github.com/antonk9021/qocryptotrader/database/drivers/sqlite3"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 // DatabaseConnectionManagerName is an exported subsystem name

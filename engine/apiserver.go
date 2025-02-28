@@ -14,15 +14,15 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/websocket"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/crypto"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/orderbook"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/ticker"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/crypto"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/orderbook"
+	"github.com/antonk9021/qocryptotrader/exchanges/ticker"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 // setupAPIServerManager checks and creates an api server manager

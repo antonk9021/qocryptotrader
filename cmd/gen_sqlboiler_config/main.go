@@ -6,12 +6,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/thrasher-corp/gocryptotrader/common/file"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/core"
-	"github.com/thrasher-corp/gocryptotrader/database"
-	"github.com/thrasher-corp/gocryptotrader/database/repository"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/common/file"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/core"
+	"github.com/antonk9021/qocryptotrader/database"
+	"github.com/antonk9021/qocryptotrader/database/repository"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 var (

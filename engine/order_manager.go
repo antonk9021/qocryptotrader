@@ -12,17 +12,17 @@ import (
 
 	"github.com/gofrs/uuid"
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/communications/base"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/currencystate"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/fundingrate"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/futures"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/order"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/communications/base"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/currency"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/currencystate"
+	"github.com/antonk9021/qocryptotrader/exchanges/fundingrate"
+	"github.com/antonk9021/qocryptotrader/exchanges/futures"
+	"github.com/antonk9021/qocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 // SetupOrderManager will boot up the OrderManager

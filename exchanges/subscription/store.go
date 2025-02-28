@@ -5,7 +5,7 @@ import (
 	"maps"
 	"sync"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common"
 )
 
 // Store is a container of subscription pointers

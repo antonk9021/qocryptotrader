@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/common/cache"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/portfolio/banking"
+	"github.com/antonk9021/qocryptotrader/common/cache"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/portfolio/banking"
 )
 
 // RequestType used for easy matching of int type to Word

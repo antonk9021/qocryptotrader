@@ -23,7 +23,7 @@ import (
 	"sync"
 
 	"github.com/buger/jsonparser"
-	"github.com/thrasher-corp/gocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common"
 )
 
 // LatestVersion used as version param to Deploy to automatically use the latest version

@@ -5,10 +5,10 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/order"
 )
 
 // orderTypeFromString returns order.Type instance from string

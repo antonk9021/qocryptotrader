@@ -3,8 +3,8 @@ package buffer
 import (
 	"sync"
 
-	"github.com/thrasher-corp/gocryptotrader/common/key"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/orderbook"
+	"github.com/antonk9021/qocryptotrader/common/key"
+	"github.com/antonk9021/qocryptotrader/exchanges/orderbook"
 )
 
 // Config defines the configuration variables for the websocket buffer; snapshot

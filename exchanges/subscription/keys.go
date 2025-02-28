@@ -3,7 +3,7 @@ package subscription
 import (
 	"fmt"
 
-	"github.com/thrasher-corp/gocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/currency"
 )
 
 // MatchableKey interface should be implemented by Key types which want a more complex matching than a simple key equality check

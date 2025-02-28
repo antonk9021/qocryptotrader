@@ -6,8 +6,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/database"
-	"github.com/thrasher-corp/gocryptotrader/database/drivers"
+	"github.com/antonk9021/qocryptotrader/database"
+	"github.com/antonk9021/qocryptotrader/database/drivers"
 )
 
 func CreateDatabase(t *testing.T) {

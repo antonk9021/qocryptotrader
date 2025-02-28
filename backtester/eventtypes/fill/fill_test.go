@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	gctorder "github.com/thrasher-corp/gocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	gctorder "github.com/antonk9021/qocryptotrader/exchanges/order"
 )
 
 func TestSetDirection(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 func TestValid(t *testing.T) {

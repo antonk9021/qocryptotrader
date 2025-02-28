@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/event"
-	"github.com/thrasher-corp/gocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/event"
+	"github.com/antonk9021/qocryptotrader/currency"
 )
 
 func TestClose(t *testing.T) {

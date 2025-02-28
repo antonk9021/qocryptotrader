@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	"github.com/thrasher-corp/gocryptotrader/types"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/types"
 )
 
 // timeString gets the time as Binance timestamp

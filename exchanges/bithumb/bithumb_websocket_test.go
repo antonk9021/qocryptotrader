@@ -6,15 +6,15 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/kline"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/stream"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/subscription"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/ticker"
-	testexch "github.com/thrasher-corp/gocryptotrader/internal/testing/exchange"
-	testsubs "github.com/thrasher-corp/gocryptotrader/internal/testing/subscriptions"
+	"github.com/antonk9021/qocryptotrader/currency"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/kline"
+	"github.com/antonk9021/qocryptotrader/exchanges/stream"
+	"github.com/antonk9021/qocryptotrader/exchanges/subscription"
+	"github.com/antonk9021/qocryptotrader/exchanges/ticker"
+	testexch "github.com/antonk9021/qocryptotrader/internal/testing/exchange"
+	testsubs "github.com/antonk9021/qocryptotrader/internal/testing/subscriptions"
 )
 
 var (

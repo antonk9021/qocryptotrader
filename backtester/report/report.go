@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/common"
-	"github.com/thrasher-corp/gocryptotrader/common/key"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/kline"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/order"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/backtester/common"
+	"github.com/antonk9021/qocryptotrader/common/key"
+	"github.com/antonk9021/qocryptotrader/exchanges/kline"
+	"github.com/antonk9021/qocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/log"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

@@ -5,15 +5,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/communications/base"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/database"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/protocol"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/subscription"
-	gctscript "github.com/thrasher-corp/gocryptotrader/gctscript/vm"
-	"github.com/thrasher-corp/gocryptotrader/log"
-	"github.com/thrasher-corp/gocryptotrader/portfolio"
-	"github.com/thrasher-corp/gocryptotrader/portfolio/banking"
+	"github.com/antonk9021/qocryptotrader/communications/base"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/database"
+	"github.com/antonk9021/qocryptotrader/exchanges/protocol"
+	"github.com/antonk9021/qocryptotrader/exchanges/subscription"
+	gctscript "github.com/antonk9021/qocryptotrader/gctscript/vm"
+	"github.com/antonk9021/qocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/portfolio"
+	"github.com/antonk9021/qocryptotrader/portfolio/banking"
 )
 
 // Constants declared here are filename strings and test strings

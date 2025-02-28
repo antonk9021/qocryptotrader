@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/thrasher-corp/gocryptotrader/database/repository/candle"
+	"github.com/antonk9021/qocryptotrader/database/repository/candle"
 	"github.com/urfave/cli/v2"
 )
 

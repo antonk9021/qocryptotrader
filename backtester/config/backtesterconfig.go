@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/common"
-	"github.com/thrasher-corp/gocryptotrader/common/file"
-	gctconfig "github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/backtester/common"
+	"github.com/antonk9021/qocryptotrader/common/file"
+	gctconfig "github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 // ReadBacktesterConfigFromPath will take a config from a path

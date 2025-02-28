@@ -5,10 +5,10 @@ import (
 	"log"
 	"sync"
 
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	"github.com/thrasher-corp/gocryptotrader/engine"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/engine"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
 )
 
 func main() {

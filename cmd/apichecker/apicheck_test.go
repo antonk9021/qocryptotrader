@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"testing"
 
-	gctfile "github.com/thrasher-corp/gocryptotrader/common/file"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	gctfile "github.com/antonk9021/qocryptotrader/common/file"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 var (

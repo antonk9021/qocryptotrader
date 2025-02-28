@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 func TestMatchURLVals(t *testing.T) {

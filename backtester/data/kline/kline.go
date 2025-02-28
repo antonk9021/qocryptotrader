@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/event"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/kline"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
-	gctkline "github.com/thrasher-corp/gocryptotrader/exchanges/kline"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/event"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/kline"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
+	gctkline "github.com/antonk9021/qocryptotrader/exchanges/kline"
 )
 
 // NewDataFromKline returns a new struct

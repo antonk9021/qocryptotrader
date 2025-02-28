@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	gctorder "github.com/thrasher-corp/gocryptotrader/exchanges/order"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	gctorder "github.com/antonk9021/qocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 func TestCanTransact(t *testing.T) {

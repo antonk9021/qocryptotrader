@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/database"
-	modelPSQL "github.com/thrasher-corp/gocryptotrader/database/models/postgres"
-	modelSQLite "github.com/thrasher-corp/gocryptotrader/database/models/sqlite3"
-	"github.com/thrasher-corp/gocryptotrader/database/repository"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/database"
+	modelPSQL "github.com/antonk9021/qocryptotrader/database/models/postgres"
+	modelSQLite "github.com/antonk9021/qocryptotrader/database/models/sqlite3"
+	"github.com/antonk9021/qocryptotrader/database/repository"
+	"github.com/antonk9021/qocryptotrader/log"
 	"github.com/thrasher-corp/sqlboiler/boil"
 	"github.com/thrasher-corp/sqlboiler/queries/qm"
 )

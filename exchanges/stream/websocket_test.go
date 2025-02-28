@@ -17,14 +17,14 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/protocol"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/request"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/subscription"
-	mockws "github.com/thrasher-corp/gocryptotrader/internal/testing/websocket"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/exchanges/protocol"
+	"github.com/antonk9021/qocryptotrader/exchanges/request"
+	"github.com/antonk9021/qocryptotrader/exchanges/subscription"
+	mockws "github.com/antonk9021/qocryptotrader/internal/testing/websocket"
 )
 
 const (

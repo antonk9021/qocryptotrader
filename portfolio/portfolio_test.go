@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/core"
-	"github.com/thrasher-corp/gocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/core"
+	"github.com/antonk9021/qocryptotrader/currency"
 )
 
 const (

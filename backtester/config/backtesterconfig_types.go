@@ -4,9 +4,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/common"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
-	gctconfig "github.com/thrasher-corp/gocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/backtester/common"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
+	gctconfig "github.com/antonk9021/qocryptotrader/config"
 )
 
 var (

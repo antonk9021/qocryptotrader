@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/buger/jsonparser"
-	v0 "github.com/thrasher-corp/gocryptotrader/config/versions/v0"
-	v1 "github.com/thrasher-corp/gocryptotrader/config/versions/v1"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	v0 "github.com/antonk9021/qocryptotrader/config/versions/v0"
+	v1 "github.com/antonk9021/qocryptotrader/config/versions/v1"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 // Version1 is an ExchangeVersion to upgrade currency pair format for exchanges

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/exchanges/request"
+	"github.com/antonk9021/qocryptotrader/exchanges/request"
 )
 
 func TestDefaultRetryPolicy(t *testing.T) {

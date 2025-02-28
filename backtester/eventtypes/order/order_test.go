@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/event"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	gctorder "github.com/thrasher-corp/gocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/event"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	"github.com/antonk9021/qocryptotrader/currency"
+	gctorder "github.com/antonk9021/qocryptotrader/exchanges/order"
 )
 
 func TestIsOrder(t *testing.T) {

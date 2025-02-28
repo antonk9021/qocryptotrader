@@ -5,16 +5,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data/kline"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/funding"
-	"github.com/thrasher-corp/gocryptotrader/backtester/report"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/engine"
-	gctexchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	gctkline "github.com/thrasher-corp/gocryptotrader/exchanges/kline"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/data/kline"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	"github.com/antonk9021/qocryptotrader/backtester/funding"
+	"github.com/antonk9021/qocryptotrader/backtester/report"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/engine"
+	gctexchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	gctkline "github.com/antonk9021/qocryptotrader/exchanges/kline"
 )
 
 var (

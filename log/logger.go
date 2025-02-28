@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/thrasher-corp/gocryptotrader/common/convert"
+	"github.com/antonk9021/qocryptotrader/common/convert"
 )
 
 var (

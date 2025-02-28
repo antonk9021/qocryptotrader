@@ -6,15 +6,15 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/eventholder"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/exchange"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/statistics"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies"
-	"github.com/thrasher-corp/gocryptotrader/backtester/funding"
-	"github.com/thrasher-corp/gocryptotrader/backtester/report"
-	"github.com/thrasher-corp/gocryptotrader/engine"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/eventholder"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/exchange"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/statistics"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies"
+	"github.com/antonk9021/qocryptotrader/backtester/funding"
+	"github.com/antonk9021/qocryptotrader/backtester/report"
+	"github.com/antonk9021/qocryptotrader/engine"
 )
 
 var (

@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	"github.com/buger/jsonparser"
-	"github.com/thrasher-corp/gocryptotrader/common/file"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/config/versions"
+	"github.com/antonk9021/qocryptotrader/common/file"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/config/versions"
 )
 
 var commands = []string{"upgrade", "downgrade", "encrypt", "decrypt"}

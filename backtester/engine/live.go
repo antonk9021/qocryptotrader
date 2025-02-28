@@ -9,17 +9,17 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/common"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data/kline"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data/kline/live"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/funding"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/engine"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	gctkline "github.com/thrasher-corp/gocryptotrader/exchanges/kline"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/backtester/common"
+	"github.com/antonk9021/qocryptotrader/backtester/data/kline"
+	"github.com/antonk9021/qocryptotrader/backtester/data/kline/live"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	"github.com/antonk9021/qocryptotrader/backtester/funding"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/engine"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	gctkline "github.com/antonk9021/qocryptotrader/exchanges/kline"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 // SetupLiveDataHandler creates a live data handler to retrieve and append

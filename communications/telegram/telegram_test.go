@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/communications/base"
-	"github.com/thrasher-corp/gocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/communications/base"
+	"github.com/antonk9021/qocryptotrader/config"
 )
 
 const (

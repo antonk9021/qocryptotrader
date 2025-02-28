@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/database"
-	"github.com/thrasher-corp/gocryptotrader/database/drivers"
-	"github.com/thrasher-corp/gocryptotrader/database/repository/exchange"
-	"github.com/thrasher-corp/gocryptotrader/database/testhelpers"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/database"
+	"github.com/antonk9021/qocryptotrader/database/drivers"
+	"github.com/antonk9021/qocryptotrader/database/repository/exchange"
+	"github.com/antonk9021/qocryptotrader/database/testhelpers"
 )
 
 var (

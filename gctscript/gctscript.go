@@ -1,8 +1,8 @@
 package gctscript
 
 import (
-	"github.com/thrasher-corp/gocryptotrader/gctscript/modules"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/wrappers/gct"
+	"github.com/antonk9021/qocryptotrader/gctscript/modules"
+	"github.com/antonk9021/qocryptotrader/gctscript/wrappers/gct"
 )
 
 // Setup configures the wrapper interface to use

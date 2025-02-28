@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/thrasher-corp/gocryptotrader/currency/forexprovider/base"
+	"github.com/antonk9021/qocryptotrader/currency/forexprovider/base"
 )
 
 var c CurrencyLayer

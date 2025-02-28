@@ -3,7 +3,7 @@ package currency
 import (
 	"sync"
 
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
 )
 
 // PairsManager manages asset pairs

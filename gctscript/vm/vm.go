@@ -12,13 +12,13 @@ import (
 
 	"github.com/d5/tengo/v2"
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/crypto"
-	scriptevent "github.com/thrasher-corp/gocryptotrader/database/repository/script"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/modules/gct"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/modules/loader"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/wrappers/validator"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/crypto"
+	scriptevent "github.com/antonk9021/qocryptotrader/database/repository/script"
+	"github.com/antonk9021/qocryptotrader/gctscript/modules/gct"
+	"github.com/antonk9021/qocryptotrader/gctscript/modules/loader"
+	"github.com/antonk9021/qocryptotrader/gctscript/wrappers/validator"
+	"github.com/antonk9021/qocryptotrader/log"
 	"github.com/volatiletech/null"
 )
 

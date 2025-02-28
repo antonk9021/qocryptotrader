@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 // MatchURLVals matches url.Value query strings

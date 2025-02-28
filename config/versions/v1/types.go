@@ -1,6 +1,6 @@
 package v1
 
-import v0 "github.com/thrasher-corp/gocryptotrader/config/versions/v0"
+import v0 "github.com/antonk9021/qocryptotrader/config/versions/v0"
 
 // PairsManager contains exchange pair management config
 type PairsManager struct {

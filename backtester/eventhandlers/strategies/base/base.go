@@ -1,11 +1,11 @@
 package base
 
 import (
-	"github.com/thrasher-corp/gocryptotrader/backtester/common"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio/holdings"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/backtester/common"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio/holdings"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
 )
 
 // Strategy is base implementation of the Handler interface

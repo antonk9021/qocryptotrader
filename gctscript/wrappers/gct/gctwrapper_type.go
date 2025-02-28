@@ -1,6 +1,6 @@
 package gct
 
-import "github.com/thrasher-corp/gocryptotrader/gctscript/wrappers/gct/exchange"
+import "github.com/antonk9021/qocryptotrader/gctscript/wrappers/gct/exchange"
 
 // Wrapper struct
 type Wrapper struct {

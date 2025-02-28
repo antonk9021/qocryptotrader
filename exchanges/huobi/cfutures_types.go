@@ -1,6 +1,6 @@
 package huobi
 
-import "github.com/thrasher-corp/gocryptotrader/types"
+import "github.com/antonk9021/qocryptotrader/types"
 
 // WsSwapReqKline stores req kline data for swap websocket
 type WsSwapReqKline struct {

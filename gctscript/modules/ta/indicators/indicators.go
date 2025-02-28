@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/thrasher-corp/gct-ta/indicators"
-	"github.com/thrasher-corp/gocryptotrader/gctscript/modules"
+	"github.com/antonk9021/qocryptotrader/gctscript/modules"
 )
 
 // OHLCV locale string for OHLCV data conversion failure

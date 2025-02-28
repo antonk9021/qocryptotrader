@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/eventholder"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/statistics"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies/binancecashandcarry"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/eventholder"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/statistics"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies/binancecashandcarry"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
 )
 
 func TestSetupRunManager(t *testing.T) {

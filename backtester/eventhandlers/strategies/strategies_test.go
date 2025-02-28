@@ -4,14 +4,14 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/backtester/data"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/portfolio"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies/base"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies/dollarcostaverage"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies/rsi"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/funding"
-	"github.com/thrasher-corp/gocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/backtester/data"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/portfolio"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies/base"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies/dollarcostaverage"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies/rsi"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	"github.com/antonk9021/qocryptotrader/backtester/funding"
+	"github.com/antonk9021/qocryptotrader/common"
 )
 
 func TestGetStrategies(t *testing.T) {

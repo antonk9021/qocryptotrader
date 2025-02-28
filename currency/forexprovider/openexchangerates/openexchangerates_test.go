@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/currency/forexprovider/base"
+	"github.com/antonk9021/qocryptotrader/currency/forexprovider/base"
 )
 
 // please set apikey for due diligence testing NOTE testing uses your allocated

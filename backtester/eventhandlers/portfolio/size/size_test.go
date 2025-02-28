@@ -6,15 +6,15 @@ import (
 	"time"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/exchange"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/event"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/order"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventtypes/signal"
-	gctcommon "github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/binance"
-	gctorder "github.com/thrasher-corp/gocryptotrader/exchanges/order"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/exchange"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/event"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/order"
+	"github.com/antonk9021/qocryptotrader/backtester/eventtypes/signal"
+	gctcommon "github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/exchanges/binance"
+	gctorder "github.com/antonk9021/qocryptotrader/exchanges/order"
 )
 
 func TestSizingAccuracy(t *testing.T) {

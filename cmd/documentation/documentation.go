@@ -13,10 +13,10 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/file"
-	"github.com/thrasher-corp/gocryptotrader/core"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/file"
+	"github.com/antonk9021/qocryptotrader/core"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

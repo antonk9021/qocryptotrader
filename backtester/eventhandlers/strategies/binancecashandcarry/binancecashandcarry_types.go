@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/shopspring/decimal"
-	"github.com/thrasher-corp/gocryptotrader/backtester/eventhandlers/strategies/base"
+	"github.com/antonk9021/qocryptotrader/backtester/eventhandlers/strategies/base"
 )
 
 const (

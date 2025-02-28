@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/database"
-	"github.com/thrasher-corp/gocryptotrader/database/repository/datahistoryjobresult"
+	"github.com/antonk9021/qocryptotrader/database"
+	"github.com/antonk9021/qocryptotrader/database/repository/datahistoryjobresult"
 )
 
 var errCannotSetSamePrerequisite = errors.New("prerequisite job cannot be the same as the following job")

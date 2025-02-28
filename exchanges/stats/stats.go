@@ -4,8 +4,8 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/asset"
+	"github.com/antonk9021/qocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/exchanges/asset"
 )
 
 // Add adds or updates the Item stats

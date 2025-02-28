@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/buger/jsonparser"
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 // Version3 is an ExchangeVersion to remove the publishPeriod from the exchange's orderbook config

@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/thrasher-corp/gocryptotrader/core"
+	"github.com/antonk9021/qocryptotrader/core"
 	"github.com/urfave/cli/v2"
 )
 

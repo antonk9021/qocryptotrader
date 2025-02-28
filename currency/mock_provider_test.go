@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/thrasher-corp/gocryptotrader/currency/forexprovider"
-	"github.com/thrasher-corp/gocryptotrader/currency/forexprovider/base"
+	"github.com/antonk9021/qocryptotrader/currency/forexprovider"
+	"github.com/antonk9021/qocryptotrader/currency/forexprovider/base"
 )
 
 type MockProvider struct{}

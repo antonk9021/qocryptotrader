@@ -15,13 +15,13 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/currency"
-	exchange "github.com/thrasher-corp/gocryptotrader/exchanges"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/mock"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/sharedtestvalues"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/subscription"
-	testutils "github.com/thrasher-corp/gocryptotrader/internal/testing/utils"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/currency"
+	exchange "github.com/antonk9021/qocryptotrader/exchanges"
+	"github.com/antonk9021/qocryptotrader/exchanges/mock"
+	"github.com/antonk9021/qocryptotrader/exchanges/sharedtestvalues"
+	"github.com/antonk9021/qocryptotrader/exchanges/subscription"
+	testutils "github.com/antonk9021/qocryptotrader/internal/testing/utils"
 )
 
 // Setup takes an empty exchange instance and loads config for it from testdata/configtest and connects a NewTestWebsocket

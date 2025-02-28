@@ -11,8 +11,8 @@ import (
 	"os"
 
 	"github.com/buger/jsonparser"
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/common/crypto"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/common/crypto"
 	"golang.org/x/crypto/scrypt"
 	"golang.org/x/term"
 )

@@ -13,10 +13,10 @@ const (
 
 	PrereleaseBlurb = "This version is pre-release and is not intended to be used as a production ready trading framework or bot - use at your own risk."
 	IsRelease       = false
-	GitHub          = "GitHub: https://github.com/thrasher-corp/gocryptotrader"
+	GitHub          = "GitHub: https://github.com/antonk9021/qocryptotrader"
 	ProjectKanban   = "Kanban: https://github.com/orgs/thrasher-corp/projects/3"
 	Slack           = "Slack:  https://join.slack.com/t/gocryptotrader/shared_invite/enQtNTQ5NDAxMjA2Mjc5LTc5ZDE1ZTNiOGM3ZGMyMmY1NTAxYWZhODE0MWM5N2JlZDk1NDU0YTViYzk4NTk3OTRiMDQzNGQ1YTc4YmRlMTk"
-	Issues          = "Issues: https://github.com/thrasher-corp/gocryptotrader/issues"
+	Issues          = "Issues: https://github.com/antonk9021/qocryptotrader/issues"
 )
 
 // vars related to the app version

@@ -3,7 +3,7 @@ package currency
 import (
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/currency/coinmarketcap"
+	"github.com/antonk9021/qocryptotrader/currency/coinmarketcap"
 )
 
 // Config holds all the information needed for currency related manipulation

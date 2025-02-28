@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/thrasher-corp/gocryptotrader/currency"
+	"github.com/antonk9021/qocryptotrader/currency"
 )
 
 var (

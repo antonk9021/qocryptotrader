@@ -10,12 +10,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/common"
-	"github.com/thrasher-corp/gocryptotrader/config"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/protocol"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/stream/buffer"
-	"github.com/thrasher-corp/gocryptotrader/exchanges/subscription"
-	"github.com/thrasher-corp/gocryptotrader/log"
+	"github.com/antonk9021/qocryptotrader/common"
+	"github.com/antonk9021/qocryptotrader/config"
+	"github.com/antonk9021/qocryptotrader/exchanges/protocol"
+	"github.com/antonk9021/qocryptotrader/exchanges/stream/buffer"
+	"github.com/antonk9021/qocryptotrader/exchanges/subscription"
+	"github.com/antonk9021/qocryptotrader/log"
 )
 
 const jobBuffer = 5000

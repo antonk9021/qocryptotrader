@@ -1,6 +1,6 @@
 package gct
 
-import "github.com/thrasher-corp/gocryptotrader/gctscript/wrappers/gct/exchange"
+import "github.com/antonk9021/qocryptotrader/gctscript/wrappers/gct/exchange"
 
 // Setup returns a Wrapper
 func Setup() *Wrapper {

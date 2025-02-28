@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/thrasher-corp/gocryptotrader/encoding/json"
+	"github.com/antonk9021/qocryptotrader/encoding/json"
 )
 
 var (
