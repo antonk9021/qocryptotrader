@@ -1,4 +1,4 @@
-module github.com/thrasher-corp/gocryptotrader
+module github.com/antonk9021/qocryptotrader
 
 go 1.23.0
 
