@@ -292,6 +292,18 @@ func (s *Settings) PrintLoadedSettings() {
 	gctlog.Debugln(gctlog.Global)
 }
 
+// SetupWebsocketRoutineManager sets up bot.WebsocketRoutineManager
+func (bot *Engine) SetupWebsocketRoutineManager() {
+	if w, err := setupWebsocketRoutineManager(bot.ExchangeManager, bot.OrderManager, bot.currencyPairSyncer, &bot.Config.Currency, bot.Settings.Verbose); err != nil {
+		gctlog.Errorf(gctlog.Global, "Unable to initialise websocket routine manager. Err: %s", err)
+	} else {
+		bot.WebsocketRoutineManager = w
+		if err = bot.WebsocketRoutineManager.Start(); err != nil {
+			gctlog.Errorf(gctlog.Global, "failed to start websocket routine manager. Err: %s", err)
+		}
+	}
+}
+
 // Start starts the engine
 func (bot *Engine) Start() error {
 	if bot == nil {
