@@ -84,13 +84,13 @@ func (m *WebsocketRoutineManager) Stop() error {
 		return fmt.Errorf("websocket routine manager %w", ErrNilSubsystem)
 	}
 
-	m.mu.Lock()
+	m.Mu.Lock()
 	if atomic.LoadInt32(&m.state) == stoppedState {
-		m.mu.Unlock()
+		m.Mu.Unlock()
 		return fmt.Errorf("websocket routine manager %w", ErrSubSystemNotStarted)
 	}
 	atomic.StoreInt32(&m.state, stoppedState)
-	m.mu.Unlock()
+	m.Mu.Unlock()
 
 	close(m.shutdown)
 	m.wg.Wait()
@@ -178,14 +178,14 @@ func (m *WebsocketRoutineManager) websocketDataReceiver(ws *stream.Websocket) er
 				if data == nil {
 					log.Errorf(log.WebsocketMgr, "exchange %s nil data sent to websocket", ws.GetName())
 				}
-				m.mu.RLock()
+				m.Mu.RLock()
 				for x := range m.dataHandlers {
 					err := m.dataHandlers[x](ws.GetName(), data)
 					if err != nil {
 						log.Errorln(log.WebsocketMgr, err)
 					}
 				}
-				m.mu.RUnlock()
+				m.Mu.RUnlock()
 			}
 		}
 	}()
@@ -210,8 +210,8 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 				d)
 		}
 	case *ticker.Price:
-		m.mu.Lock()
-		defer m.mu.Unlock()
+		m.Mu.Lock()
+		defer m.Mu.Unlock()
 		if m.syncer.IsRunning() {
 			err := m.syncer.WebsocketUpdate(exchName,
 				d.Pair,
@@ -442,11 +442,11 @@ func (m *WebsocketRoutineManager) registerWebsocketDataHandler(fn WebsocketDataH
 		return m.setWebsocketDataHandler(fn)
 	}
 
-	m.mu.Lock()
+	m.Mu.Lock()
 	// Push front so that any registered data handler has first preference
 	// over the gct default handler.
 	m.dataHandlers = append([]WebsocketDataHandler{fn}, m.dataHandlers...)
-	m.mu.Unlock()
+	m.Mu.Unlock()
 	return nil
 }
 
@@ -459,8 +459,8 @@ func (m *WebsocketRoutineManager) setWebsocketDataHandler(fn WebsocketDataHandle
 	if fn == nil {
 		return errNilWebsocketDataHandlerFunction
 	}
-	m.mu.Lock()
+	m.Mu.Lock()
 	m.dataHandlers = []WebsocketDataHandler{fn}
-	m.mu.Unlock()
+	m.Mu.Unlock()
 	return nil
 }

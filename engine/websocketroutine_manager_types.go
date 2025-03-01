@@ -36,7 +36,7 @@ type WebsocketRoutineManager struct {
 	dataHandlers    []WebsocketDataHandler
 	TickerUpdates   map[int64][]ticker.Price
 	wg              sync.WaitGroup
-	mu              sync.RWMutex
+	Mu              sync.RWMutex
 }
 
 // WebsocketDataHandler defines a function signature for a function that handles
