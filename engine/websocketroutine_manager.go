@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sync"
 	"sync/atomic"
+	"time"
 
 	"github.com/antonk9021/qocryptotrader/common"
 	"github.com/antonk9021/qocryptotrader/currency"
@@ -209,6 +210,8 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 				d)
 		}
 	case *ticker.Price:
+		m.mu.Lock()
+		defer m.mu.Unlock()
 		if m.syncer.IsRunning() {
 			err := m.syncer.WebsocketUpdate(exchName,
 				d.Pair,
@@ -219,11 +222,16 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 				return err
 			}
 		}
+		if d.LastUpdated.IsZero() {
+			return nil // TODO: Handle the case when no update timestamp found
+		}
 		err := ticker.ProcessTicker(d)
 		if err != nil {
 			return err
 		}
-		m.syncer.PrintTickerSummary(d, "websocket", err)
+		//m.syncer.PrintTickerSummary(d, "websocket", err)
+		ts := d.LastUpdated.UnixNano() / int64(time.Millisecond) // Adjusting the ticker data millisecond-wisely
+		m.tickerUpdates[ts] = append(m.tickerUpdates[ts], *d)
 	case []ticker.Price:
 		for x := range d {
 			if m.syncer.IsRunning() {
@@ -240,7 +248,7 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 			if err != nil {
 				return err
 			}
-			m.syncer.PrintTickerSummary(&d[x], "websocket", err)
+			//m.syncer.PrintTickerSummary(&d[x], "websocket", err)
 		}
 	case order.Detail, ticker.Price, orderbook.Depth:
 		return errUseAPointer

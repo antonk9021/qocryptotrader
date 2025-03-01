@@ -2,6 +2,7 @@ package engine
 
 import (
 	"errors"
+	"github.com/antonk9021/qocryptotrader/exchanges/ticker"
 	"sync"
 
 	"github.com/antonk9021/qocryptotrader/currency"
@@ -33,6 +34,7 @@ type WebsocketRoutineManager struct {
 	currencyConfig  *currency.Config
 	shutdown        chan struct{}
 	dataHandlers    []WebsocketDataHandler
+	TickerUpdates   map[int64][]ticker.Price
 	wg              sync.WaitGroup
 	mu              sync.RWMutex
 }
