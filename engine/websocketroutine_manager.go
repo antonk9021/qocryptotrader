@@ -231,7 +231,7 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 		}
 		//m.syncer.PrintTickerSummary(d, "websocket", err)
 		ts := d.LastUpdated.UnixNano() / int64(time.Millisecond) // Adjusting the ticker data millisecond-wisely
-		m.tickerUpdates[ts] = append(m.tickerUpdates[ts], *d)
+		m.TickerUpdates[ts] = append(m.TickerUpdates[ts], *d)
 	case []ticker.Price:
 		for x := range d {
 			if m.syncer.IsRunning() {
