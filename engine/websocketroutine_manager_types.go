@@ -34,7 +34,7 @@ type WebsocketRoutineManager struct {
 	currencyConfig  *currency.Config
 	shutdown        chan struct{}
 	dataHandlers    []WebsocketDataHandler
-	TickerUpdates   map[int64][]ticker.Price
+	TickerUpdates   chan ticker.Price
 	wg              sync.WaitGroup
 	Mu              sync.RWMutex
 }

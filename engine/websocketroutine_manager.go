@@ -2,10 +2,6 @@ package engine
 
 import (
 	"fmt"
-	"sync"
-	"sync/atomic"
-	"time"
-
 	"github.com/antonk9021/qocryptotrader/common"
 	"github.com/antonk9021/qocryptotrader/currency"
 	"github.com/antonk9021/qocryptotrader/exchanges/account"
@@ -16,6 +12,8 @@ import (
 	"github.com/antonk9021/qocryptotrader/exchanges/ticker"
 	"github.com/antonk9021/qocryptotrader/exchanges/trade"
 	"github.com/antonk9021/qocryptotrader/log"
+	"sync"
+	"sync/atomic"
 )
 
 // setupWebsocketRoutineManager creates a new websocket routine manager
@@ -32,12 +30,14 @@ func setupWebsocketRoutineManager(exchangeManager iExchangeManager, orderManager
 	if cfg.CurrencyPairFormat == nil {
 		return nil, errNilCurrencyPairFormat
 	}
+	tickerUpdates := make(chan ticker.Price, 50000)
 	man := &WebsocketRoutineManager{
 		verbose:         verbose,
 		exchangeManager: exchangeManager,
 		orderManager:    orderManager,
 		syncer:          syncer,
 		currencyConfig:  cfg,
+		TickerUpdates:   tickerUpdates,
 	}
 	return man, man.registerWebsocketDataHandler(man.websocketDataHandler, false)
 }
@@ -210,8 +210,8 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 				d)
 		}
 	case *ticker.Price:
-		m.Mu.Lock()
-		defer m.Mu.Unlock()
+		//m.Mu.Lock()
+		//defer m.Mu.Unlock()
 		if m.syncer.IsRunning() {
 			err := m.syncer.WebsocketUpdate(exchName,
 				d.Pair,
@@ -230,8 +230,14 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 			return err
 		}
 		//m.syncer.PrintTickerSummary(d, "websocket", err)
-		ts := d.LastUpdated.UnixNano() / int64(time.Millisecond) // Adjusting the ticker data millisecond-wisely
-		m.TickerUpdates[ts] = append(m.TickerUpdates[ts], *d)
+		//ts := d.LastUpdated.UnixNano() / int64(time.Millisecond) // Adjusting the ticker data millisecond-wisely
+		//go func() { m.TickerUpdates <- *d }()
+		select {
+		case m.TickerUpdates <- *d:
+		default:
+			log.Warnln(log.WebsocketMgr, "Ticker update channel is full; dropping tick for ", d.ExchangeName)
+		}
+		//m.TickerUpdates[ts] = append(m.TickerUpdates[ts], *d)
 	case []ticker.Price:
 		for x := range d {
 			if m.syncer.IsRunning() {
