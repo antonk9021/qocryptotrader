@@ -24,6 +24,13 @@ const (
 	readyState
 )
 
+type TickerUpdate struct {
+	Exchange  string
+	Pair      currency.Pair
+	Candle    ticker.Price
+	Timestamp int64
+}
+
 // WebsocketRoutineManager is used to process websocket updates from a unified location
 type WebsocketRoutineManager struct {
 	state           int32
@@ -34,7 +41,7 @@ type WebsocketRoutineManager struct {
 	currencyConfig  *currency.Config
 	shutdown        chan struct{}
 	dataHandlers    []WebsocketDataHandler
-	TickerUpdates   chan ticker.Price
+	TickerUpdates   chan TickerUpdate
 	wg              sync.WaitGroup
 	Mu              sync.RWMutex
 }
