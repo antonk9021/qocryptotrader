@@ -14,7 +14,6 @@ import (
 	"github.com/antonk9021/qocryptotrader/log"
 	"sync"
 	"sync/atomic"
-	"time"
 )
 
 // setupWebsocketRoutineManager creates a new websocket routine manager
@@ -230,14 +229,15 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 		if err != nil {
 			return err
 		}
+
 		//m.syncer.PrintTickerSummary(d, "websocket", err)
 		//go func() { m.TickerUpdates <- *d }()
 		select {
 		case m.TickerUpdates <- TickerUpdate{
-			Exchange:  d.ExchangeName,
-			Pair:      d.Pair,
-			Timestamp: d.LastUpdated.UnixNano() / int64(time.Millisecond), // Adjusting the ticker data millisecond-wisely
-			Candle:    *d,
+			Exchange:    d.ExchangeName,
+			Pair:        d.Pair,
+			LastUpdated: d.LastUpdated,
+			Candle:      *d,
 		}:
 		default:
 			log.Warnln(log.WebsocketMgr, "Ticker update channel is full; dropping tick for ", d.ExchangeName)
@@ -259,7 +259,7 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 			if err != nil {
 				return err
 			}
-			//m.syncer.PrintTickerSummary(&d[x], "websocket", err)
+			m.syncer.PrintTickerSummary(&d[x], "websocket", err)
 		}
 	case order.Detail, ticker.Price, orderbook.Depth:
 		return errUseAPointer

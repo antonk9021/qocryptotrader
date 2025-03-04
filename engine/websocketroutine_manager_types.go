@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/antonk9021/qocryptotrader/exchanges/ticker"
 	"sync"
+	"time"
 
 	"github.com/antonk9021/qocryptotrader/currency"
 )
@@ -25,10 +26,10 @@ const (
 )
 
 type TickerUpdate struct {
-	Exchange  string
-	Pair      currency.Pair
-	Candle    ticker.Price
-	Timestamp int64
+	Exchange    string
+	Pair        currency.Pair
+	Candle      ticker.Price
+	LastUpdated time.Time
 }
 
 // WebsocketRoutineManager is used to process websocket updates from a unified location
