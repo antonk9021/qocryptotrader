@@ -383,7 +383,7 @@ var packageRateLimits = request.RateLimitDefinitions{
 }
 
 func standardRateLimit() *request.RateLimiterWithWeight {
-	return request.NewRateLimitWithWeight(time.Second*10, 200, 1)
+	return request.NewRateLimitWithWeight(time.Millisecond*500, 200, 1)
 }
 
 func personalAccountRateLimit() *request.RateLimiterWithWeight {
