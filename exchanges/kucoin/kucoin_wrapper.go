@@ -8,7 +8,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shopspring/decimal"
 	"github.com/antonk9021/qocryptotrader/common"
 	"github.com/antonk9021/qocryptotrader/common/key"
 	"github.com/antonk9021/qocryptotrader/config"
@@ -32,6 +31,7 @@ import (
 	"github.com/antonk9021/qocryptotrader/exchanges/trade"
 	"github.com/antonk9021/qocryptotrader/log"
 	"github.com/antonk9021/qocryptotrader/portfolio/withdraw"
+	"github.com/shopspring/decimal"
 )
 
 // SetDefaults sets the basic defaults for Kucoin
@@ -196,14 +196,16 @@ func (ku *Kucoin) Setup(exch *config.Exchange) error {
 	}
 	err = ku.Websocket.Setup(
 		&stream.WebsocketSetup{
-			ExchangeConfig:        exch,
-			DefaultURL:            kucoinWebsocketURL,
-			RunningURL:            wsRunningEndpoint,
-			Connector:             ku.WsConnect,
-			Subscriber:            ku.Subscribe,
-			Unsubscriber:          ku.Unsubscribe,
-			GenerateSubscriptions: ku.generateSubscriptions,
-			Features:              &ku.Features.Supports.WebsocketCapabilities,
+			ExchangeConfig:                         exch,
+			DefaultURL:                             kucoinWebsocketURL,
+			RunningURL:                             wsRunningEndpoint,
+			Connector:                              ku.WsConnect,
+			Subscriber:                             ku.Subscribe,
+			Unsubscriber:                           ku.Unsubscribe,
+			GenerateSubscriptions:                  ku.generateSubscriptions,
+			Features:                               &ku.Features.Supports.WebsocketCapabilities,
+			UseMultiConnectionManagement:           true,
+			MaxWebsocketSubscriptionsPerConnection: 1024,
 			OrderbookBufferConfig: buffer.Config{
 				SortBuffer:            true,
 				SortBufferByUpdateIDs: true,
