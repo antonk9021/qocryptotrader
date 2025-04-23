@@ -9,7 +9,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shopspring/decimal"
 	"github.com/antonk9021/qocryptotrader/common"
 	"github.com/antonk9021/qocryptotrader/common/key"
 	"github.com/antonk9021/qocryptotrader/config"
@@ -34,6 +33,7 @@ import (
 	"github.com/antonk9021/qocryptotrader/exchanges/trade"
 	"github.com/antonk9021/qocryptotrader/log"
 	"github.com/antonk9021/qocryptotrader/portfolio/withdraw"
+	"github.com/shopspring/decimal"
 )
 
 // SetDefaults sets the basic defaults for Binance
@@ -258,7 +258,7 @@ func (b *Binance) Setup(exch *config.Exchange) error {
 	return b.Websocket.SetupNewConnection(&stream.ConnectionSetup{
 		ResponseCheckTimeout: exch.WebsocketResponseCheckTimeout,
 		ResponseMaxLimit:     exch.WebsocketResponseMaxLimit,
-		RateLimit:            request.NewWeightedRateLimitByDuration(250 * time.Millisecond),
+		RateLimit:            request.NewWeightedRateLimitByDuration(1 * time.Millisecond),
 	})
 }
 
