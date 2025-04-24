@@ -205,7 +205,7 @@ func (ku *Kucoin) Setup(exch *config.Exchange) error {
 			GenerateSubscriptions:                  ku.generateSubscriptions,
 			Features:                               &ku.Features.Supports.WebsocketCapabilities,
 			UseMultiConnectionManagement:           false,
-			MaxWebsocketSubscriptionsPerConnection: 1024,
+			MaxWebsocketSubscriptionsPerConnection: 256,
 			OrderbookBufferConfig: buffer.Config{
 				SortBuffer:            true,
 				SortBufferByUpdateIDs: true,

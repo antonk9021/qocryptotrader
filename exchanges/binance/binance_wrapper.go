@@ -245,7 +245,7 @@ func (b *Binance) Setup(exch *config.Exchange) error {
 		Unsubscriber:                           b.Unsubscribe,
 		GenerateSubscriptions:                  b.generateSubscriptions,
 		Features:                               &b.Features.Supports.WebsocketCapabilities,
-		MaxWebsocketSubscriptionsPerConnection: 1024,
+		MaxWebsocketSubscriptionsPerConnection: 256,
 		UseMultiConnectionManagement:           false,
 		OrderbookBufferConfig: buffer.Config{
 			SortBuffer:            true,
@@ -260,7 +260,7 @@ func (b *Binance) Setup(exch *config.Exchange) error {
 	return b.Websocket.SetupNewConnection(&stream.ConnectionSetup{
 		ResponseCheckTimeout: exch.WebsocketResponseCheckTimeout,
 		ResponseMaxLimit:     exch.WebsocketResponseMaxLimit,
-		RateLimit:            request.NewWeightedRateLimitByDuration(10 * time.Millisecond),
+		RateLimit:            request.NewWeightedRateLimitByDuration(250 * time.Millisecond),
 	})
 }
 
