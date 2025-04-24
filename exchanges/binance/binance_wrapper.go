@@ -246,7 +246,7 @@ func (b *Binance) Setup(exch *config.Exchange) error {
 		GenerateSubscriptions: b.generateSubscriptions,
 		Features:              &b.Features.Supports.WebsocketCapabilities,
 		//MaxWebsocketSubscriptionsPerConnection: 256,
-		UseMultiConnectionManagement: true,
+		UseMultiConnectionManagement: false,
 		OrderbookBufferConfig: buffer.Config{
 			SortBuffer:            true,
 			SortBufferByUpdateIDs: true,
