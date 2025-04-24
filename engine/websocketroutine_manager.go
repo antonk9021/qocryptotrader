@@ -212,7 +212,6 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 	case *ticker.Price:
 		//m.Mu.Lock()
 		//defer m.Mu.Unlock()
-		fmt.Println(d)
 		if m.syncer.IsRunning() {
 			err := m.syncer.WebsocketUpdate(exchName,
 				d.Pair,
@@ -223,7 +222,7 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 				return err
 			}
 		}
-		if d.LastUpdated.IsZero() || d.Open == .0 || d.Close == .0 {
+		if d.LastUpdated.IsZero() || d.Last == .0 {
 			return nil // TODO: Handle the case when no update timestamp found
 		}
 		err := ticker.ProcessTicker(d)
