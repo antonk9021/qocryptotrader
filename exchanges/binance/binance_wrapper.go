@@ -237,16 +237,16 @@ func (b *Binance) Setup(exch *config.Exchange) error {
 		return err
 	}
 	err = b.Websocket.Setup(&stream.WebsocketSetup{
-		ExchangeConfig:                         exch,
-		DefaultURL:                             binanceDefaultWebsocketURL,
-		RunningURL:                             ePoint,
-		Connector:                              b.WsConnect,
-		Subscriber:                             b.Subscribe,
-		Unsubscriber:                           b.Unsubscribe,
-		GenerateSubscriptions:                  b.generateSubscriptions,
-		Features:                               &b.Features.Supports.WebsocketCapabilities,
-		MaxWebsocketSubscriptionsPerConnection: 256,
-		UseMultiConnectionManagement:           false,
+		ExchangeConfig:        exch,
+		DefaultURL:            binanceDefaultWebsocketURL,
+		RunningURL:            ePoint,
+		Connector:             b.WsConnect,
+		Subscriber:            b.Subscribe,
+		Unsubscriber:          b.Unsubscribe,
+		GenerateSubscriptions: b.generateSubscriptions,
+		Features:              &b.Features.Supports.WebsocketCapabilities,
+		//MaxWebsocketSubscriptionsPerConnection: 256,
+		UseMultiConnectionManagement: true,
 		OrderbookBufferConfig: buffer.Config{
 			SortBuffer:            true,
 			SortBufferByUpdateIDs: true,
