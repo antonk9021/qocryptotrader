@@ -245,21 +245,31 @@ func (m *WebsocketRoutineManager) websocketDataHandler(exchName string, data int
 		//m.TickerUpdates[ts] = append(m.TickerUpdates[ts], *d)
 	case []ticker.Price:
 		for x := range d {
-			if m.syncer.IsRunning() {
-				err := m.syncer.WebsocketUpdate(exchName,
-					d[x].Pair,
-					d[x].AssetType,
-					SyncItemTicker,
-					nil)
-				if err != nil {
-					return err
-				}
-			}
+			//if m.syncer.IsRunning() {
+			//	err := m.syncer.WebsocketUpdate(exchName,
+			//		d[x].Pair,
+			//		d[x].AssetType,
+			//		SyncItemTicker,
+			//		nil)
+			//	if err != nil {
+			//		return err
+			//	}
+			//}
 			err := ticker.ProcessTicker(&d[x])
 			if err != nil {
 				return err
 			}
-			m.syncer.PrintTickerSummary(&d[x], "websocket", err)
+			select {
+			case m.TickerUpdates <- TickerUpdate{
+				Exchange:    d[x].ExchangeName,
+				Pair:        d[x].Pair,
+				LastUpdated: d[x].LastUpdated,
+				Candle:      d[x],
+			}:
+			default:
+				log.Warnln(log.WebsocketMgr, "Ticker update channel is full; dropping tick for ", d[x].ExchangeName)
+			}
+			//m.syncer.PrintTickerSummary(&d[x], "websocket", err)
 		}
 	case order.Detail, ticker.Price, orderbook.Depth:
 		return errUseAPointer
