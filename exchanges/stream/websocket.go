@@ -18,7 +18,7 @@ import (
 	"github.com/antonk9021/qocryptotrader/log"
 )
 
-const jobBuffer = 5000
+const jobBuffer = 20000
 
 // Public websocket errors
 var (
